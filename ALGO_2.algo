@@ -1,0 +1,55 @@
+// part one
+ALGORITHM distinct_element
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER;
+    sum,i,j,n,m: INTEGER;
+    sum = 0;
+BEGIN
+FOR i FROM 0 TO n STEP 1  DO
+    i := i+1;
+    IF (tab1[i]<>tab2[j]) THEN
+      sum := sum + tab1[i];
+    END_IF
+END_FOR
+FOR j FROM 0 TO m STEP 2  DO
+    j := j+1;
+    IF (tab2[j]<>tab1[i]) THEN
+        sum := sum + tab2[j];
+    END_IF
+END_FOR
+END
+
+// part one : Hash Tables
+ 
+ ALGORITHM Hash_Tables
+ VAR
+     htab : HASH_TABLE<STRING,STRING>;
+     tab1,tab2 : ARRAY_OF INTEGER;
+     sum,i,j,n,m: INTEGER;
+     sum=0;
+ BEGIN
+     FOR j FROM 1 TO m STEP 1  DO
+         m>=n;           
+             IF (tab1[i] in tab2) THEN
+                 return tab1[i];
+                 sum =sum + tab1[i];
+             ELSE
+                 return NULL;
+             END_IF
+     END_FOR
+ END
+
+//part tow
+
+ALGORITHM overlapping_elements
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER;
+    sum,i,j,n: INTEGER;
+    sum = 0;
+BEGIN
+    FOR i and j  FROM 0 TO n STEP 1  DO
+        IF (tab1[i]==tab2[j]) THEN
+            sum = sum + tab [i];
+        END_IF
+    END_FOR
+END
